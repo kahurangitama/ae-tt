@@ -7,11 +7,12 @@ import { TextService } from '../text-service/text.service';
   styleUrls: ['./file.component.css']
 })
 export class FileComponent implements OnInit {
+  public text = '';
   constructor(private _textService: TextService) {
   }
 
   ngOnInit() {
-    this._textService.getMockText().then((result) => console.log(result));
+    this._textService.getMockText().then((result) => this.text = result);
   }
 
 }
