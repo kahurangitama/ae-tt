@@ -1,9 +1,10 @@
 :host {
-  display: block;
+  display: flex;
   height: 100%;
+  flex-direction: column;
 }
 main {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex-grow: 1;
 }
