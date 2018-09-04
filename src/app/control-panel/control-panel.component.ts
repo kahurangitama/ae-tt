@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FileComponent } from '../file/file.component';
 
 @Component({
   selector: 'app-control-panel',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlPanelComponent implements OnInit {
 
-  constructor() { }
+  @Input() appFile: FileComponent;
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  format (event) {
+    const { command } = event.target.dataset;
+
+    if (command === 'h1' || command === 'h2' || command === 'p') {
+      document.execCommand('formatBlock', false, command);
+    } else if (command == 'createlink' || command == 'insertimage') {
+      const url = prompt('Enter the link here: ', 'http:\/\/');
+      document.execCommand(command, false, url);
+    } else {
+      document.execCommand(command, false, null);
+    }
   }
 
 }

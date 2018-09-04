@@ -8,6 +8,7 @@ import { FileComponent } from './file/file.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { HeaderComponent } from './header/header.component';
 import { TextService } from './text-service/text.service';
+import { SynonymService } from './synonym-service/synonym.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { TextService } from './text-service/text.service';
     FormsModule,
     HttpModule
   ],
-  providers: [TextService],
+  providers: [TextService, SynonymService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

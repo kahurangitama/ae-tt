@@ -8,8 +8,32 @@
 }
 
 #file {
-  width: 600px;
   flex-grow: 1;
+  
+  overflow: hidden;
+  margin: 1rem auto;
+  
+  width: 600px;
+  padding: 3rem;
   background-color: #fff;
-  border: 1px solid #e4dede;
+  border: solid 1px #e4dede;
+  outline: none;
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+#file:focus {
+  -moz-box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+
+#synonyms {
+  list-style: none;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  line-height: 1.5;
 }

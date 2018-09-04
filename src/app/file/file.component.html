@@ -1,3 +1,5 @@
-<div id="file">
-
-</div>
+<div id="file" #file contenteditable="true"></div>
+<ul id="synonyms" *ngIf="synonyms.length">
+  <li>Synonyms to word "{{word}}":</li>
+  <li *ngFor="let synonym of synonyms"><a href="#" (click)="replace($event)">{{synonym.word}}</a></li>
+</ul>
