@@ -13,7 +13,7 @@ export class ControlPanelComponent implements OnInit {
   ngOnInit() {}
 
   format (event) {
-    const { command } = event.target.dataset;
+    const { command } = event.currentTarget.dataset;
 
     if (command === 'h1' || command === 'h2' || command === 'p') {
       document.execCommand('formatBlock', false, command);
